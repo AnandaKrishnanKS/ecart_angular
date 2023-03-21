@@ -1,6 +1,6 @@
 <!-- Header-->
 <header class="bg-dark py-5">
-    <div class="container px-4 px-lg-5 my-5">
+    <div class="container px-4 px-lg-5 my-5 mt-0">
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder">Shop in style</h1>
             <p class="lead fw-normal text-white-50 mb-0">With BlackMirror</p>
@@ -27,7 +27,7 @@
 <section class="py-5 bg-light">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <div *ngFor="let i of filterProducts | filter:'':'discription'"  class="col mb-5">
+            <div *ngFor="let i of filterProducts | filter:searchkey:'discription'"  class="col mb-5">
                 <div id="forcard" class="card h-100">
                     <!-- Product image-->
                   <div style=" height: 100%; display: inline-flex; align-items: center;"> 

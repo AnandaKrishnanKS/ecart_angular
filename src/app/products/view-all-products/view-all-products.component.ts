@@ -11,16 +11,21 @@ export class ViewAllProductsComponent implements OnInit {
   //variable initialising to store data
   productList:any
   filterProducts:any
+  searchkey:any=""
 
   constructor (private ps:ProductService){}
 
   ngOnInit(): void {
 
      this.ps.viewAllProducts().subscribe(data=>{
-      // console.log(data);
+       console.log(data);
 
       this.productList=data
 
+     })
+
+     this.ps.search.subscribe((value:any)=>{
+      this.searchkey=value
      })
     
   }

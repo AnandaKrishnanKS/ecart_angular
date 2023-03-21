@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SiteLayOutModule } from './site-lay-out/site-lay-out.module';
 import{HttpClientModule} from'@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import{HttpClientModule} from'@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     SiteLayOutModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [],

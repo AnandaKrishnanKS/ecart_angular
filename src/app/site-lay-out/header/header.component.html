@@ -21,7 +21,7 @@
 
             <div class="container-fluid">
                 <form class="d-flex col-10 ms-auto me-auto" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <input [(ngModel)]="searchTerm" (keyup)="search($event)" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-secondary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </form>
               </div>

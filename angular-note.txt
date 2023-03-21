@@ -182,9 +182,28 @@ npm i --save json-server
     npx json-server --watch db.json --port 3000
 
 
-
+==============================================================
 catagories of blackmirror setItem---
 ------------------------------------
-Topwear -1
+Topwear -1                               - used in project
 Bottomwear -2
 Accessories -3
+==============================================================
+
+
+Behaviour Subject
+-------------------
+to share data between modules     - method used in Behaviour Subject is an Asynchronous method
+
+rxjs (reactive extension for js)  - is library of behaviour subject
+                                      -:is used to handle Asynchronous implementations in angular
+
+
+
+Activated Router In Angular
+----------------------------
+used to access data from urls (access params)
+
+class           - ActivatedRoute
+method          - params()     (its a Asynchronous method)
+
