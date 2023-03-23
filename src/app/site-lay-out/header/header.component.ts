@@ -10,7 +10,7 @@ export class HeaderComponent implements OnInit {
 
   searchTerm:any
 
-  constructor(private ps:ProductService){}
+  constructor(private ps:ProductService) {}
 
   ngOnInit(): void {
    

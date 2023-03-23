@@ -1,1 +1,17 @@
-<p>add-product works!</p>
+<div class="p-5 container w-50 text-center">
+    <h3>Add new Product</h3>
+    <form (ngSubmit)="addProduct()" [formGroup]="addProductForm" action="" class="bg-secondary mt-2 p-5 rounded">
+
+        <input formControlName="productName" class="form-control mb-2 p-2 ps-4" type="text" placeholder="Name"                name="pn" id="pd">
+        <input formControlName="categoryId" class="form-control mb-2 p-2 ps-4" type="text" placeholder="category Id"         name="pin1" id="pid9">
+        <input formControlName="discription" class="form-control mb-2 p-2 ps-4" type="text" placeholder="discription"         name="pin2" id="pid8">
+        <input formControlName="price" class="form-control mb-2 p-2 ps-4" type="text" placeholder="price"               name="pin3" id="pid7">
+        <input formControlName="isAvailable" class="form-control mb-2 p-2 ps-4" type="text" placeholder="availability true/false" name="pin4" id="pid6">
+        <input formControlName="productImage" class="form-control mb-2 p-2 ps-4" type="text" placeholder="product Image"       name="pin5" id="pid5">
+        <input formControlName="rating" class="form-control mb-2 p-2 ps-4" type="text" placeholder="rating"              name="pin6" id="pid4">
+        <input formControlName="review" class="form-control mb-2 p-2 ps-4" type="text" placeholder="review"              name="pin7" id="pid3">
+        <input formControlName="vendorName" class="form-control mb-2 p-2 ps-4" type="text" placeholder="vendor name"         name="pin8" id="pid2">
+        <input formControlName="warrenty" class="form-control mb-2 p-2 ps-4" type="text" placeholder="waranty"             name="pin9" id="pid1">
+        <button type="submit" class="btn btn-dark m-2 w-25">Add</button>
+    </form>
+</div>
