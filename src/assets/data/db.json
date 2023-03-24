@@ -5,7 +5,7 @@
       "productName": "B-ONe",
       "categoryId": "1",
       "discription": "Men Black Pure Cotton T-shirt",
-      "price": 499,
+      "price": "590",
       "isAvailable": true,
       "productImage": "https://i.postimg.cc/260FL9Ws/hts0.jpg",
       "rating": 4.8,
@@ -41,7 +41,7 @@
     },
     {
       "id": 4,
-      "productName": "LOCOMOTIVE",
+      "productName": "LOCOMOTIVe",
       "categoryId": "1",
       "discription": "Men Black Solid Denim Jacket",
       "price": 990,

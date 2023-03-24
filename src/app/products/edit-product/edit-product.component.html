@@ -1,6 +1,6 @@
 <div class="p-5 container w-50 text-center">
     <h3>Update Product</h3>
-    <form action="" class="bg-secondary mt-2 p-5 rounded">
+    <form (ngSubmit)="updateProduct(updateProductForm)" #updateProductForm="ngForm" action="" class="bg-secondary mt-2 p-5 rounded">
         <input [(ngModel)]="pdata.id" class="form-control mb-2 p-2 ps-4" type="text" placeholder="id"
          name="pin" id="pid">
         <input [(ngModel)]="pdata.productName" class="form-control mb-2 p-2 ps-4" type="text" placeholder="Name" 

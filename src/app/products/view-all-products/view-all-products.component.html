@@ -1,38 +1,79 @@
 <!-- Header-->
-<header class="bg-dark py-5">
+<header class="bg-black py-3">
     <div class="container px-4 px-lg-5 my-5 mt-0">
         <div class="text-center text-white">
-            <h1 class="display-4 fw-bolder">Shop in style</h1>
-            <p class="lead fw-normal text-white-50 mb-0">With BlackMirror</p>
+            <!-- <h1 class="display-4 fw-bolder">Shop in style</h1> -->
+            <p class="lead fw-normal text-white-50 mb-0">Shop in style With BlackMirror</p>
         </div>
     </div>
-    <div class="container mb-0">
+    <div class="container mb-4">
         <div class="container d-flex text-white ">
-            <div class="p-2 border rounded-3 col-2 m-auto topbtn" >
-                <a (click)="filter('')"><p class="text-center m-auto m-3 textsiz ">All products</p></a>
+            <div class="p-2 border rounded-3 col-2 m-auto topbtn">
+                <a (click)="filter('')">
+                    <p class="text-center m-auto m-3 textsiz ">All products</p>
+                </a>
             </div>
             <div class="p-2 border rounded-3 col-2 m-auto topbtn">
-                <a (click)="filter(1)"><p class="text-center m-auto m-3 textsiz ">Top Wear </p></a>
+                <a (click)="filter(1)">
+                    <p class="text-center m-auto m-3 textsiz ">Top Wear </p>
+                </a>
             </div>
             <div class="p-2 border rounded-3 col-2 m-auto topbtn">
-               <a (click)="filter(2)"><p class="text-center m-auto m-3 textsiz ">Bottom Wear</p></a>
+                <a (click)="filter(2)">
+                    <p class="text-center m-auto m-3 textsiz">Bottom Wear</p>
+                </a>
             </div>
             <div class="p-2 border rounded-3 col-2 m-auto topbtn">
-                <a (click)="filter(3)"><p class="text-center m-auto m-3 textsiz ">Accessories</p></a>
+                <a (click)="filter(3)">
+                    <p class="text-center m-auto m-3 textsiz">Accessories</p>
+                </a>
             </div>
         </div>
-    </div >
+    </div>
 </header>
+<!-- <img *ngIf="!filterProducts" src="https://i.postimg.cc/Jzk74ZRN/bg-4.jpg" alt=""> -->
+
+<div class="bg-black">
+    <div *ngIf="!filterProducts" id="carouselExampleInterval" class="carousel slide container" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2500">
+                <img  src="https://i.postimg.cc/Jzk74ZRN/bg-4.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="https://i.postimg.cc/6pfJYTmd/bg-5.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="https://i.postimg.cc/9XR6sLkX/bg-1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="https://i.postimg.cc/XN1vk1CV/bg-2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="https://i.postimg.cc/fWPw93Gy/bg-3.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button> -->
+    </div>
+</div>
+
+
 <!-- Section-->
-<section class="py-5 bg-light">
+<section *ngIf="filterProducts" class="py-5 bg-dark">
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-            <div *ngFor="let i of filterProducts | filter:searchkey:'discription'"  class="col mb-5">
+            <div *ngFor="let i of filterProducts | filter:searchkey:'discription'" class="col mb-5">
                 <div id="forcard" class="card h-100">
                     <!-- Product image-->
-                  <div style=" height: 100%; display: inline-flex; align-items: center;"> 
-                    <img class="card-img-top p-2"  src="{{i.productImage}}" alt="..." />
-                  </div>
+                    <div style=" height: 100%; display: inline-flex; align-items: center;">
+                        <img class="card-img-top p-2" src="{{i.productImage}}" alt="..." />
+                    </div>
                     <!-- Product details-->
                     <div class="card-body pb-4">
                         <div class="text-center">
@@ -40,17 +81,18 @@
                             <h5 class="fw-bolder">{{i.productName}}</h5>
                             <!-- Product price-->
                             Rs {{i.price}}
-                            
+
                         </div>
                     </div>
                     <!-- Product actions-->
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                         <p class="text-center">Rating {{i.rating}}</p>
-                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="products/view_product/{{i.id}}">View options</a></div>
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                href="products/view_product/{{i.id}}">View options</a></div>
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </section>

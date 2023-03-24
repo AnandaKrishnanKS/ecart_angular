@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 
@@ -29,6 +30,7 @@ export class ViewAllProductsComponent implements OnInit {
      })
     
   }
+
 
   filter(category:any){
 
